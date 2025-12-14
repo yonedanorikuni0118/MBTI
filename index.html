@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI性格診断</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- テスト画面 -->
+        <div id="testScreen" class="card">
+            <div class="header">
+                <div class="header-icon">🧠</div>
+                <h1>MBTI性格診断</h1>
+                <p>あなたの性格タイプを発見しましょう</p>
+            </div>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="content">
+                <div class="question-info">
+                    <span>質問 <span id="currentNum">1</span> / <span id="totalNum">20</span></span>
+                    <span class="progress-text"><span id="progressPercent">0</span>% 完了</span>
+                </div>
+                <div id="questionText" class="question"></div>
+                <div id="optionsContainer" class="options"></div>
+                <div class="navigation">
+                    <button id="backBtn" class="nav-btn back-btn hidden">
+                        ← 前の質問
+                    </button>
+                    <button id="nextBtn" class="nav-btn next-btn hidden">
+                        次の質問 →
+                    </button>
+                    <button id="finishBtn" class="nav-btn finish-btn hidden">
+                        結果を見る →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 結果画面 -->
+        <div id="resultScreen" class="card hidden">
+            <div class="header">
+                <div class="header-icon">✨</div>
+                <h1>診断結果</h1>
+                <p>あなたの性格タイプ</p>
+            </div>
+            <div class="content">
+                <div class="result-container">
+                    <div id="mbtiBadge" class="mbti-badge"></div>
+                    <h2 id="resultTitle" class="result-title"></h2>
+                    <p id="resultDescription" class="result-description"></p>
+                    <div id="traitsGrid" class="traits-grid"></div>
+                    <div id="typeExplanation" class="type-explanation"></div>
+                    <button id="restartBtn" class="restart-btn">
+                        🔄 もう一度診断する
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer">この診断は16Personalitiesを参考に作成されています</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
